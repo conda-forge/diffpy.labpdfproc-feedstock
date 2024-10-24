@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-{{ version }}.tar.gz
-  sha256: be987107c75262f2da195b13db2f0ae42e488721a44a1d6d93034e680d0737d9
+  sha256: 80e21b15b2d3db55270846fde610ac553c68408134a62aa0d2c9d3750a15ae5b
 
 build:
   noarch: python
