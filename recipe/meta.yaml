@@ -1,14 +1,14 @@
 {% set name = "diffpy.labpdfproc" %}
-{% set version = "0.3.1" %}
-{% set python_min = "3.10" %}
+{% set version = "0.4.0" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-{{ version }}.tar.gz
-  sha256: 7cc4e1a8bdb33ccb26a47b18a89ff0fd93dc0cc4d09c1cf0faf720b772bf959f
+  url: https://files.pythonhosted.org/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-{{ version }}.tar.gz
+  sha256: c6a195cab3c2d5e4fd5bdbe2072d69c5a78fd1506d7968d2d00c7d11c66487a8
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=77
     - setuptools-git-versioning >=2.0
     - pip
 
@@ -30,6 +30,7 @@ requirements:
     - diffpy.utils
     - pandas
     - scipy
+    - wxpython
     - gooey
 
 test:
@@ -38,6 +39,7 @@ test:
     - pip
     - pytest
     - pytest-mock
+    - pytest-env
   imports:
     - diffpy.labpdfproc
   source_files:
